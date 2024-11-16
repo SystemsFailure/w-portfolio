@@ -13,7 +13,7 @@ const props = defineProps({
     <div class="native_card" :style="{ ...props.config, backgroundColor: props.backgroundColor }">
 
         <div class="slot_v1" v-if="props.typeSlot === 'v1'">
-            <img src="../../assets/person.jpg" width="300px">
+            <img class="img_avatar" src="../../assets/person-1.png" width="200px">
             <div class="title">
                 <h4></h4>
                 <h1 class="name">Eric Leonhard</h1>
@@ -30,25 +30,26 @@ const props = defineProps({
 </template>
 
 <style lang="scss" scoped>
+@import '../../styles/vars.scss';
+
 .native_card {
     position: relative;
-
-    padding: 50px 46px;
     display: flex;
     align-items: flex-start;
-    gap: 30px;
     border-radius: 20px;
     background: linear-gradient(to left, #131313, #212121);
     border: 1px solid #1e1e1e;
+    padding: 40px;
+    width: 100%;
 
     .slot_v1 {
         display: flex;
         align-items: center;
-        width: 100%;
 
-        img {
+        .img_avatar {
             border-radius: 30px 0px;
             object-fit: contain;
+            border: 1px solid $base-border-color;
         }
 
         .title {

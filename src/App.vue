@@ -5,7 +5,9 @@ import NavbarWidget from './widgets/NavbarWidget.vue';
 <template>
   <nav> <NavbarWidget></NavbarWidget> </nav>
   <div class="app">
-    <router-view/>
+    <div class="main">
+      <router-view/>
+    </div>
   </div>
 </template>
 
@@ -24,8 +26,13 @@ import NavbarWidget from './widgets/NavbarWidget.vue';
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #7e7e7e;
-  padding: 30px 350px;
+  padding: 30px 300px;
   height: 100vh;
   background-color: $background-dark-theme;
 }
+
+// .main {
+//   width: 80%;
+//   height: 100%;
+// }
 </style>
