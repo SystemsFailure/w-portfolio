@@ -81,6 +81,12 @@ const props = defineProps({
             height: 70px;
             border-radius: 10rem;
         }
+
+        .social-link:hover {
+            cursor: pointer;
+            opacity: .6;
+            transition: .3s ease;
+        }
     }
 
     .nav-panel {
