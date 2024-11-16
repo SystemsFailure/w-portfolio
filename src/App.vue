@@ -1,30 +1,31 @@
+<script setup>
+import NavbarWidget from './widgets/NavbarWidget.vue';
+</script>
+
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <nav> <NavbarWidget></NavbarWidget> </nav>
+  <div class="app">
+    <router-view/>
+  </div>
 </template>
 
 <style lang="scss">
+@import './styles/vars.scss';
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-}
-
-nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+  color: #7e7e7e;
+  padding: 30px 350px;
+  height: 100vh;
+  background-color: $background-dark-theme;
 }
 </style>
